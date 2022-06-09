@@ -17,4 +17,4 @@ https://www.remotion.dev/docs/ssr
 As well as the server side capabilities from nextjs
 https://nextjs.org/docs/basic-features/data-fetching/overview
 
-# Is this possible ? How to do it easily -> See content of files "/pages/index.js" and "/pages/api/render-video.js"
+Is this possible ? How to do it easily and how would you do it? -> See content of files "/pages/index.js" and "/pages/api/render-video.js"
