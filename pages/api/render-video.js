@@ -1,9 +1,9 @@
 import { bundle } from "@remotion/bundler";
 import { getCompositions, renderMedia } from "@remotion/renderer";
  
-const start = async () => {
+export default async function (req,res) {
   // The composition you want to render
-  const compositionId = "Demo"; //From "/videos/Video.tsx" => composition ID
+  const compositionId = "Demo";
  
   // Create a webpack bundle of the video.
   // You only have to do this once, you can reuse the bundle.
@@ -38,6 +38,6 @@ const start = async () => {
     outputLocation: "my" + String(Math.floor(Math.random() * 10000000 + 1)) + "_" + "video.mp4",
     inputProps,
   });
+
+  res.status(200).json();
 };
- 
-start();

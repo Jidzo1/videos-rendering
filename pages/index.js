@@ -8,21 +8,18 @@ export default function Home() {
 
   function createVideo(){
     setLoading(true)
-
-    //Something like this would be ideal, but not sure if possible...
     
-    const options = {
+    /*const options = {
       method: 'POST',
       headers: {
       'Content-Type': 'application/json'
       },
       body: JSON.stringify({video_title: 'Hello, world', video_content: "Demo"})
-    };
+    };*/
     
-    fetch('api/render-video',options)
+    fetch('api/render-video')
       .then((res) => res.json())
       .then((data) => {
-        setCreateVideo(data)
         setLoading(false)
       }).catch((err)=>{setLoading(false);console.log(err)})
       
