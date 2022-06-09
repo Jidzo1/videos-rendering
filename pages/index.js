@@ -10,8 +10,7 @@ export default function Home() {
     setLoading(true)
 
     //Something like this would be ideal, but not sure if possible...
-
-    /*
+    
     const options = {
       method: 'POST',
       headers: {
@@ -25,7 +24,7 @@ export default function Home() {
       .then((data) => {
         setCreateVideo(data)
         setLoading(false)
-      }).catch((err)=>{setLoading(false);console.log(err)})*/
+      }).catch((err)=>{setLoading(false);console.log(err)})
       
   }
 
@@ -39,7 +38,7 @@ export default function Home() {
 
       <h1>Hello world</h1>
       <h2>{isLoading ? "Loading..." : "Not loading"}</h2>
-      <button type="submit" disabled onClick={createVideo}>This button is not working yet,<br /> but should create a video on click</button>
+      <button type="submit" onClick={createVideo}>This button is not working yet,<br /> but should create a video on click</button>
     </div>
   )
 }

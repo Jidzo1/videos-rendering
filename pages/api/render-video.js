@@ -7,7 +7,7 @@ const start = async () => {
  
   // Create a webpack bundle of the video.
   // You only have to do this once, you can reuse the bundle.
-  //const bundleLocation = await bundle(require.resolve("../pages/index.js"));
+  const bundleLocation = await bundle("./videos/index");
  
   // Parametrize the video by passing arbitrary props to your component.
   const inputProps = {
@@ -35,7 +35,7 @@ const start = async () => {
     composition,
     serveUrl: bundleLocation,
     codec: "h264",
-    outputLocation: "video.mp4",
+    outputLocation: "my" + String(Math.floor(Math.random() * 10000000 + 1)) + "_" + "video.mp4",
     inputProps,
   });
 };
